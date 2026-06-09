@@ -1,0 +1,40 @@
+<link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="welcome india" />
+<meta property="og:description"
+  content="welcome india for travel agencies, tour operators, holiday planners, and booking websites." />
+<meta property="og:image" content="https://travlla.dexignzone.com/tailwind/demo/social-image.png" />
+<meta property="og:url" content="https://travlla.dexignzone.com/demo/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Travlla" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Welcome India | DexignZone" />
+<meta name="twitter:description"
+  content="Travlla is a responsive Travel & Tour Tailwind CSS template designed for travel agencies, tour operators, holiday planners, and booking websites." />
+<meta name="twitter:image" content="https://travlla.dexignzone.com/tailwind/demo/social-image.png" />
+
+<!-- IE Compatibility -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta name="format-detection" content="telephone=no" />
+
+<link rel="stylesheet" type="text/css" href="assets/icons/line-awesome/css/line-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/icons/flaticon/flaticon.css" />
+<link rel="stylesheet" type="text/css" href="assets/icons/fontawesome/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/icons/themify-icons/css/themify-icons.css" />
+<link rel="stylesheet" type="text/css" href="assets/icons/feather/css/feather.css" />
+
+<link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" href="assets/vendor/flatpickr/css/flatpicker.css" />
+<link rel="stylesheet" href="assets/css/lc_lightbox.css" />
+<link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
+<link rel="stylesheet" href="assets/vendor/nouislider/nouislider.min.css" />
+
+<!-- style -->
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Kaushan+Script&display=swap" rel="stylesheet" />
