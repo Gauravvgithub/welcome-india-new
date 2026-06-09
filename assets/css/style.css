@@ -11168,3 +11168,220 @@ font-size:22px;
 transform:scale(1.1);
 transition:0.3s;
 }
+
+.site-translate {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid rgba(2, 41, 67, 0.14);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #022943;
+}
+
+.site-translate .fa-globe {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.site-translate .goog-te-gadget {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  color: transparent;
+  font-size: 0;
+  line-height: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.site-translate .goog-te-gadget span,
+.site-translate .goog-logo-link {
+  display: none !important;
+}
+
+.site-translate .goog-te-combo,
+#google_translate_element {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.site-language-select {
+  width: 126px;
+  height: 28px;
+  margin: 0 !important;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #022943;
+  font: 600 14px/1 Figtree, sans-serif;
+  cursor: pointer;
+}
+
+.language-confirm-open {
+  overflow: hidden;
+}
+
+.language-confirm-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(2, 41, 67, 0.56);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.24s ease, visibility 0.24s ease;
+}
+
+.language-confirm-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.language-confirm-dialog {
+  position: relative;
+  width: min(100%, 430px);
+  padding: 34px 30px 28px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #022943;
+  text-align: center;
+  box-shadow: 0 24px 70px rgba(2, 41, 67, 0.22);
+  transform: translateY(14px) scale(0.98);
+  transition: transform 0.24s ease;
+}
+
+.language-confirm-modal.is-open .language-confirm-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.language-confirm-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(2, 41, 67, 0.1);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #022943;
+  cursor: pointer;
+}
+
+.language-confirm-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #f8d448;
+  color: #022943;
+  font-size: 28px;
+}
+
+.language-confirm-dialog h3 {
+  margin: 0 0 10px;
+  color: #022943;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+.language-confirm-dialog p {
+  margin: 0 auto 24px;
+  max-width: 330px;
+  color: rgba(2, 41, 67, 0.76);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.language-confirm-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.language-confirm-cancel,
+.language-confirm-apply {
+  min-width: 128px;
+  min-height: 46px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.language-confirm-cancel {
+  border: 1px solid rgba(2, 41, 67, 0.18);
+  background: #ffffff;
+  color: #022943;
+}
+
+.language-confirm-apply {
+  border: 1px solid #022943;
+  background: #022943;
+  color: #ffffff;
+}
+
+.language-confirm-cancel:hover {
+  border-color: #022943;
+}
+
+.language-confirm-apply:hover {
+  border-color: #f8d448;
+  background: #f8d448;
+  color: #022943;
+}
+
+.goog-te-banner-frame,
+iframe.goog-te-banner-frame,
+iframe.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+@media (max-width: 575px) {
+  .site-translate {
+    max-width: 150px;
+    padding: 0 8px;
+    gap: 6px;
+  }
+
+  .site-language-select {
+    width: 104px;
+    font-size: 13px;
+  }
+
+  .language-confirm-dialog {
+    padding: 30px 20px 22px;
+  }
+
+  .language-confirm-actions {
+    flex-direction: column;
+  }
+
+  .language-confirm-cancel,
+  .language-confirm-apply {
+    width: 100%;
+  }
+}

@@ -122,7 +122,57 @@ $obj = new database();
           </div>
         </div>
         <div class="flex lg:justify-end lg:items-center z-9 h-20 xl:pl-8 max-lg:ms-auto">
-          <div class="flex items-center">
+          <div class="flex items-center gap-3">
+            <div class="site-translate notranslate" title="Translate website" translate="no">
+              <i class="fas fa-globe" aria-hidden="true"></i>
+              <label class="sr-only" for="site-language-select">Select language</label>
+              <select id="site-language-select" class="site-language-select" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="bn">Bengali</option>
+                <option value="gu">Gujarati</option>
+                <option value="kn">Kannada</option>
+                <option value="ml">Malayalam</option>
+                <option value="mr">Marathi</option>
+                <option value="pa">Punjabi</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+                <option value="ur">Urdu</option>
+                <option value="ar">Arabic</option>
+                <option value="de">German</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="it">Italian</option>
+                <option value="ja">Japanese</option>
+                <option value="ko">Korean</option>
+                <option value="ru">Russian</option>
+                <option value="zh-CN">Chinese</option>
+              </select>
+              <div id="google_translate_element" aria-hidden="true"></div>
+            </div>
+            <div
+              class="language-confirm-modal notranslate"
+              id="languageConfirmModal"
+              aria-hidden="true"
+              role="dialog"
+              aria-labelledby="languageConfirmTitle"
+              aria-modal="true"
+              translate="no">
+              <div class="language-confirm-dialog" role="document">
+                <button type="button" class="language-confirm-close" data-language-confirm-cancel aria-label="Close">
+                  <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+                <div class="language-confirm-icon">
+                  <i class="fas fa-globe-asia" aria-hidden="true"></i>
+                </div>
+                <h3 id="languageConfirmTitle">Change Language?</h3>
+                <p id="languageConfirmMessage">Are you sure you want to change the website language?</p>
+                <div class="language-confirm-actions">
+                  <button type="button" class="language-confirm-cancel" data-language-confirm-cancel>Cancel</button>
+                  <button type="button" class="language-confirm-apply" data-language-confirm-apply>Yes, Change</button>
+                </div>
+              </div>
+            </div>
             <ul class="ml-5 flex items-center -mr-2.5">
               <li class="inline-block" data-drawer="#offcanvas-right" data-drawer-placement="right">
                 <button
