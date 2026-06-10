@@ -20,7 +20,7 @@
 <script src="assets/js/animation.js"></script>
 <script src="assets/js/custom.js"></script>
 <script src="assets/js/enquiry-popup.js"></script>
-<script src="assets/js/site-translate.js"></script>
+<script src="assets/js/site-translate.js?v=20260610"></script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script>

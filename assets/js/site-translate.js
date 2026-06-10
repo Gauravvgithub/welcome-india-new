@@ -25,17 +25,73 @@
     }
   }
 
+  function getCookieDomains() {
+    var hostname = window.location.hostname;
+    var domains = [""];
+    var parts = hostname.split(".");
+
+    if (!hostname || hostname === "localhost" || /^[\d.]+$/.test(hostname)) {
+      return domains;
+    }
+
+    domains.push(hostname);
+    domains.push("." + hostname);
+
+    if (parts.length > 2) {
+      domains.push("." + parts.slice(-2).join("."));
+      domains.push("." + parts.slice(-3).join("."));
+    }
+
+    return domains.filter(function (domain, index) {
+      return domains.indexOf(domain) === index;
+    });
+  }
+
+  function getCookiePaths() {
+    var currentPath = window.location.pathname || "/";
+    var currentDirectory = currentPath.replace(/\/[^/]*$/, "/") || "/";
+    var paths = ["/", currentDirectory];
+
+    return paths.filter(function (path, index) {
+      return paths.indexOf(path) === index;
+    });
+  }
+
+  function writeTranslateCookie(value, expires, path, domain) {
+    document.cookie =
+      cookieName +
+      "=" +
+      value +
+      ";expires=" +
+      expires.toUTCString() +
+      ";path=" +
+      path +
+      (domain ? ";domain=" + domain : "");
+  }
+
   function setTranslateCookie(language) {
     var cookieValue = "/" + defaultLanguage + "/" + language;
     var expires = new Date();
+    var domains = getCookieDomains();
     expires.setFullYear(expires.getFullYear() + 1);
 
-    document.cookie =
-      cookieName + "=" + cookieValue + ";expires=" + expires.toUTCString() + ";path=/";
+    clearTranslateCookie();
+
+    domains.forEach(function (domain) {
+      writeTranslateCookie(cookieValue, expires, "/", domain);
+    });
   }
 
   function clearTranslateCookie() {
-    document.cookie = cookieName + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+    var expires = new Date(0);
+    var domains = getCookieDomains();
+    var paths = getCookiePaths();
+
+    domains.forEach(function (domain) {
+      paths.forEach(function (path) {
+        writeTranslateCookie("", expires, path, domain);
+      });
+    });
   }
 
   function getCustomSelect() {
